@@ -5,7 +5,7 @@ import { StyledRestaurant, StyledRestaurantDetails } from './style'
 
 const mapKey = 'AIzaSyD_1dPGiRnu7LDb7Lptg-K-ZghT6PF62ww'
 
-const Restaurant = ({ Venue, Event }) => {
+const Restaurant = ({ Venue, Event, itemsIsLoading }) => {
   let imgUrl =
     'https://maps.googleapis.com/maps/api/staticmap?center=' +
     Venue.address1 +
@@ -13,6 +13,16 @@ const Restaurant = ({ Venue, Event }) => {
     mapKey +
     '&size=400x400&markers=label:' +
     Venue.address1
+
+  if (itemsIsLoading) {
+    return (
+      <div>
+        <StyledRestaurantDetails>
+          Loading some good fuckin' places to eat...
+        </StyledRestaurantDetails>
+      </div>
+    )
+  }
 
   return (
     <div
