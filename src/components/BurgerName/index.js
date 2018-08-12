@@ -1,9 +1,9 @@
 import React from 'react'
 import { StyledBurgerName } from './style'
 
-const BurgerDetails = ({ Event }) => {
+const BurgerName = ({ Event }) => {
   const burgerTitle = Event[0].name_of_burger
-  const titleContainsBurger = checkForBurgerInTitle(burgerTitle) 
+  const titleContainsBurger = checkForBurgerInTitle(burgerTitle)
   return (
     <StyledBurgerName>
       {removeThe(burgerTitle) + (titleContainsBurger ? '' : ' Burger')}
@@ -22,7 +22,7 @@ function removeThe(title) {
 function checkForBurgerInTitle(title) {
   const burgerWords = ['Burger', 'Bayger', 'Baoger', 'burger']
 
-for(let i = 0; i < burgerWords.length; i++) {
+  for (let i = 0; i < burgerWords.length; i++) {
     if (title.includes(burgerWords[i])) {
       return true
     }
@@ -30,4 +30,4 @@ for(let i = 0; i < burgerWords.length; i++) {
   return false
 }
 
-export default BurgerDetails
+export default BurgerName
