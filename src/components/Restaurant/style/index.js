@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const StyledRestaurant = styled.a`
   color: white;
-  text-decoration: none;
   margin: 0;
   font-size: 30px;
+  text-decoration: underline;
 
   &:hover {
     cursor: pointer;

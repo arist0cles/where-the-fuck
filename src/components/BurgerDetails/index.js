@@ -6,9 +6,17 @@ const BurgerDetails = ({ Event }) => {
   const titleContainsBurger = checkForBurgerInTitle(burgerTitle) 
   return (
     <StyledBurgerName>
-      {burgerTitle + (titleContainsBurger ? '' : ' Burger')}
+      {removeThe(burgerTitle) + (titleContainsBurger ? '' : ' Burger')}
     </StyledBurgerName>
   )
+}
+
+function removeThe(title) {
+  const startWithThe = title.substring(0, 4) === 'The '
+  if(startWithThe) {
+    return title.substring(4, title.length)
+  }
+  return title
 }
 
 function checkForBurgerInTitle(title) {
