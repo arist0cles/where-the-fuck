@@ -14,9 +14,7 @@
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "styled-components": "^3.3.3",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
+    "styled-components": "^3.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,7 +25,9 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.5"
+    "redux-devtools-extension": "^2.13.5",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   },
   "homepage": "http://ullibodnar.github.io/where-the-fuck"
 }
